@@ -161,7 +161,7 @@ export default function Cost() {
       </div>
 
       <Card className="mt-10 overflow-x-auto">
-        <table className="w-full min-w-[520px] text-sm">
+        <table className="w-full min-w-130 text-sm">
           <thead>
             <tr className="border-b border-line text-left text-xs text-muted">
               <th className="px-4 py-3 font-normal">Même charge de travail</th>

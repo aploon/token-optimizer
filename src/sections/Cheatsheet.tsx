@@ -74,7 +74,7 @@ export default function Cheatsheet() {
       />
 
       <div className="overflow-x-auto">
-        <table className="w-full min-w-[560px] text-sm">
+        <table className="w-full min-w-140 text-sm">
           <thead>
             <tr className="border-b border-ink text-left text-xs text-muted">
               <th className="py-2 pr-4 font-normal">Commande</th>
