@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+/* Palette : papier chaud + encre, un seul accent. Pas de dégradés ni de halos. */
+:root {
+  --paper: #f4f1ea;
+  --surface: #fbfaf6;
+  --sunken: #ebe6db;
+  --ink: #1f1d1a;
+  --muted: #6b665c;
+  --faint: #a29c8f;
+  --line: #ddd6c8;
+  --accent: #c4552f;
+  --accent-soft: #f3dfd4;
+  --good: #3f7d5a;
+  --good-soft: #dcebe0;
+  --warn: #b07a12;
+  --warn-soft: #f3e7c8;
+  --bad: #b23b2b;
+  --bad-soft: #f4d9d3;
+  --t1: #e6dccb;
+  --t2: #d5e2d6;
+  --t3: #dcdcec;
+  --t4: #efd9cc;
+  --t5: #e5e0c4;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #171614;
+    --surface: #1f1d1a;
+    --sunken: #13120f;
+    --ink: #ece7dc;
+    --muted: #a39d90;
+    --faint: #6d685e;
+    --line: #34302a;
+    --accent: #e07a55;
+    --accent-soft: #3a251c;
+    --good: #7cbf96;
+    --good-soft: #1e2e24;
+    --warn: #dcae4c;
+    --warn-soft: #33291a;
+    --bad: #e3806f;
+    --bad-soft: #3a211d;
+    --t1: #3a332a;
+    --t2: #263329;
+    --t3: #2a2b3a;
+    --t4: #3b2a22;
+    --t5: #35321f;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --paper: #171614;
+  --surface: #1f1d1a;
+  --sunken: #13120f;
+  --ink: #ece7dc;
+  --muted: #a39d90;
+  --faint: #6d685e;
+  --line: #34302a;
+  --accent: #e07a55;
+  --accent-soft: #3a251c;
+  --good: #7cbf96;
+  --good-soft: #1e2e24;
+  --warn: #dcae4c;
+  --warn-soft: #33291a;
+  --bad: #e3806f;
+  --bad-soft: #3a211d;
+  --t1: #3a332a;
+  --t2: #263329;
+  --t3: #2a2b3a;
+  --t4: #3b2a22;
+  --t5: #35321f;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-surface: var(--surface);
+  --color-sunken: var(--sunken);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-good: var(--good);
+  --color-good-soft: var(--good-soft);
+  --color-warn: var(--warn);
+  --color-warn-soft: var(--warn-soft);
+  --color-bad: var(--bad);
+  --color-bad-soft: var(--bad-soft);
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --font-display: "Fraunces", Georgia, serif;
+}
+
+html,
+body {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--accent-soft);
+}
+
+input[type="range"] {
+  accent-color: var(--accent);
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
